@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio | NxtWave Student</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">PORTFOLIO<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#" id="cert-modal-trigger">Certifications</a></li>
+                <li><a href="#" id="projects-modal-trigger">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-profile" data-aos="zoom-in">
+                    <img src="assets/images/WhatsApp Image 2026-02-09 at 9.53.26 PM (1).jpeg" alt="Profile"
+                        class="profile-img">
+                </div>
+                <div class="hero-content" data-aos="fade-up">
+                    <span class="hero-subtitle">ELECTRONICS & COMMUNICATION ENGINEER</span>
+                    <h1 class="hero-name gradient-text">Srushti S Patil</h1>
+                    <p class="hero-tagline">Fullstack Developer | ML Enthusiast | Hardware Innovator</p>
+                    <p class="hero-description">Passionate about bridging software and hardware. Dedicated student at
+                        NxtWave CCBP 4.0 Academy, building innovative solutions with code and circuits.</p>
+
+                    <div class="hero-btns">
+                        <a href="#" id="hero-cert-trigger" class="btn btn-primary">View Certifications</a>
+                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <a href="https://github.com/srushti81" target="_blank"><i data-lucide="github"></i></a>
+                        <a href="https://www.linkedin.com/in/srushti-patil-ss25205" target="_blank"><i
+                                data-lucide="linkedin"></i></a>
+                        <a href="mailto:srushtipatil015@gmail.com"><i data-lucide="mail"></i></a>
+                    </div>
+
+                    <div class="scroll-down">
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>About Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text" data-aos="fade-right">
+                        <p>I am a passionate student from <strong>A.G.M College of Engineering and Technology</strong>
+                            and a dedicated learner at <strong>NxtWave</strong>, specializing in Full Stack Development.
+                            I love solving problems through code and constantly learning new tools to build better
+                            software.</p>
+                        <p>I was officially appointed as <strong>Technical Team Lead for the OSCode AGMR Chapter
+                                (2025–2026)</strong>.
+                            This role involves leading technical teams, mentoring peers, contributing to open-source
+                            initiatives,
+                            and supporting the execution of technical events and projects, strengthening both my
+                            leadership and
+                            problem-solving skills.</p>
+                        <div class="about-info">
+                            <div class="info-item">
+                                <i data-lucide="mail"></i>
+                                <span>srushtipatil015@gmail.com</span>
+                            </div>
+                            <div class="info-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Hubli,Karnataka</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stats" data-aos="fade-left">
+                        <div class="stat-card">
+                            <h3>20+</h3>
+                            <p>Certifications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Technical Skills</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category" data-aos="zoom-in">
+                        <i data-lucide="code-2"></i>
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>HTML5 / CSS3</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category" data-aos="zoom-in" data-aos-delay="100">
+                        <i data-lucide="database"></i>
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>MongoDB</li>
+                            <li>SQLite</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category" data-aos="zoom-in" data-aos-delay="200">
+                        <i data-lucide="wrench"></i>
+                        <h3>Tools</h3>
+                        <ul>
+                            <li>Git / GitHub</li>
+                            <li>VS Code</li>
+                            <li>Antigravity</li>
+                            <li>Netlify</li>
+                            <li>Vercel & Render</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Modal -->
+        <div id="projects-modal" class="cert-modal">
+            <div class="cert-modal-content">
+                <div class="cert-modal-header">
+                    <h2>My Projects</h2>
+                    <button class="cert-modal-back" id="projects-modal-close">
+                        <i data-lucide="arrow-left"></i>
+                        <span>Back</span>
+                    </button>
+                </div>
+                <div class="cert-modal-body">
+                    <div class="projects-grid-modal">
+                        <!-- Project 1 - AI Autopilot -->
+                        <div class="project-card-modal">
+                            <h3>🚀 AI Autopilot</h3>
+                            <p class="project-description">A full-stack AI-powered web application that provides
+                                ChatGPT-like AI responses, secure JWT authentication, email automation with multiple
+                                attachments, and command execution. Features include AI chat assistant using Groq/LLaMA,
+                                command history tracking, and a comprehensive dashboard with status pages.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Vite</span>
+                                <span>FastAPI</span>
+                                <span>Python</span>
+                                <span>MongoDB</span>
+                                <span>JWT</span>
+                                <span>Groq AI</span>
+                                <span>Tailwind CSS</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 - EduPlay Adventures -->
+                        <div class="project-card-modal">
+                            <h3>🎮 EduPlay Adventures</h3>
+                            <p class="project-description">An interactive educational gaming platform that makes
+                                learning fun through engaging gameplay. Features multiple educational games including
+                                English Sprint, Photosynthesis Lab, Sodium Water Lab, and Mixture Fix. Includes secure
+                                user authentication, leaderboard system, user profiles, and responsive design for all
+                                devices.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>Vite</span>
+                                <span>Tailwind CSS</span>
+                                <span>shadcn/ui</span>
+                                <span>Supabase</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 - Plant Disease Detection AI -->
+                        <div class="project-card-modal">
+                            <h3>🌱 Plant Disease Detection AI</h3>
+                            <p class="project-description">A modern web application that uses artificial intelligence to
+                                detect plant diseases from images. Built with Flask, TensorFlow, and a pre-trained
+                                Convolutional Neural Network (CNN) model. Features AI-Powered Detection for 17 disease
+                                categories in Tomato, Potato, and Bell Pepper plants, with real-time analysis,
+                                confidence scores, symptoms, and treatment recommendations.</p>
+                            <div class="project-tags">
+                                <span>Flask</span>
+                                <span>TensorFlow</span>
+                                <span>CNN</span>
+                                <span>Python</span>
+                                <span>AI</span>
+                                <span>Machine Learning</span>
+                                <span>OpenCV</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 - AI Powered Cow Breed Classifier -->
+                        <div class="project-card-modal">
+                            <h3>🐄 AI Powered Cow Breed Classifier</h3>
+                            <p class="project-description">A Deep Learning-based Cow Breed Classifier using
+                                TensorFlow/Keras to identify cow breeds from images. The system includes data
+                                preprocessing, model training, evaluation, and a prediction module integrated into a web
+                                application for real-time inference.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>TensorFlow</span>
+                                <span>Keras</span>
+                                <span>NumPy</span>
+                                <span>OpenCV</span>
+                                <span>Flask</span>
+                                <span>Tailwind CSS</span>
+                                <span>Git</span>
+                                <span>LFS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Certifications Modal -->
+        <div id="cert-modal" class="cert-modal">
+            <div class="cert-modal-content">
+                <div class="cert-modal-header">
+                    <h2>My Certifications</h2>
+                    <button class="cert-modal-back" id="cert-modal-close">
+                        <i data-lucide="arrow-left"></i>
+                        <span>Back</span>
+                    </button>
+                </div>
+                <div class="cert-modal-body">
+                    <!-- Achievement Certificates Section -->
+                    <div class="cert-section">
+                        <h3 class="cert-section-title">Achievement Certificates</h3>
+                        <div class="certs-image-grid">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 7.14.19 PM.jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-10 at 7.54.43 PM.jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-10 at 7.54.44 PM.jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-10 at 7.54.54 PM.jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.42.53 PM.jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.42.53 PM (1).jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.43.24 PM.jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.43.24 PM (1).jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.43.24 PM (2).jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.43.25 PM.jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.43.25 PM (1).jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.43.25 PM (2).jpeg"
+                                alt="Certificate" class="cert-image">
+                        </div>
+                    </div>
+
+                    <!-- Participation Certificates Section -->
+                    <div class="cert-section">
+                        <h3 class="cert-section-title">Participation Certificates</h3>
+                        <div class="certs-image-grid">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.42.17 PM.jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.42.49 PM.jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.42.50 PM.jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.42.51 PM.jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.42.51 PM (1).jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.42.52 PM.jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.42.52 PM (1).jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.43.23 PM.jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.43.23 PM (1).jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.43.26 PM.jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.43.26 PM (1).jpeg"
+                                alt="Certificate" class="cert-image">
+                            <img src="assets/certificates/WhatsApp Image 2026-02-09 at 8.43.26 PM (2).jpeg"
+                                alt="Certificate" class="cert-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Achievements</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="achievements-list">
+                    <div class="achievement-item" data-aos="fade-left">
+                        <div class="achievement-number">01</div>
+                        <div class="achievement-content">
+                            <h3>NxtWave CCBP Academy</h3>
+                            <p>Consistently held top ranks in weekly exams and practical coding challenges.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item" data-aos="fade-left" data-aos-delay="100">
+                        <div class="achievement-number">02</div>
+                        <div class="achievement-content">
+                            <h3>Hackathon Finalist</h3>
+                            <p>Finalist in the Savishkar Karnataka North (CODEBHARAT 2025) hackathon held at
+                                IIIT,Dharwad for
+                                building playful learning website(LearnQuest) without pressure for students.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Demo Videos -->
+                <div class="achievements-videos" data-aos="fade-up">
+                    <div class="achievements-videos-grid">
+                        <div class="achievement-video-card">
+                            <video controls width="100%">
+                                <source src="assets/videos/WhatsApp Video 2026-02-09 at 8.42.49 PM.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="achievement-video-card">
+                            <video controls width="100%">
+                                <source src="assets/videos/WhatsApp Video 2026-02-09 at 8.43.23 PM.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-box" data-aos="zoom-in">
+                    <div class="section-title">
+                        <h2>Get In Touch</h2>
+                        <p>Have a project in mind or want to collaborate? Feel free to reach out!</p>
+                    </div>
+                    <div class="contact-email">
+                        <i data-lucide="mail"></i>
+                        <a href="mailto:srushtipatil015@gmail.com" class="email-link">srushtipatil015@gmail.com</a>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://github.com/srushti81" target="_blank" class="social-link">
+                            <i data-lucide="github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/srushti-patil-ss25205" target="_blank" class="social-link">
+                            <i data-lucide="linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Portfolio. Designed by Srushti Patil.</p>
+                <div class="social-links">
+                    <a href="https://github.com/srushti81" target="_blank"><i data-lucide="github"></i></a>
+                    <a href="https://www.linkedin.com/in/srushti-patil-ss25205" target="_blank"><i
+                            data-lucide="linkedin"></i></a>
+                    <a href="mailto:srushtipatil015@gmail.com"><i data-lucide="mail"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
