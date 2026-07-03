@@ -826,6 +826,8 @@ h3,
 
 .achievement-content h3 {
     margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
 }
 
 .achievement-content p {
@@ -875,98 +877,227 @@ h3,
     width: 100%;
 }
 
-/* Contact Section */
-.contact {
+/* Academic Section */
+.academic {
     padding: 100px 0;
 }
 
-.contact-box {
-    max-width: 600px;
-    margin: 0 auto;
-    background: var(--bg-card);
-    padding: 4rem;
-    border-radius: 32px;
-    border: 1px solid var(--glass-border);
-    text-align: center;
-}
-
-.contact-box .section-title {
+.academic-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
     margin-bottom: 3rem;
 }
 
-.contact-box .section-title p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    margin-top: 1rem;
-}
-
-.contact-email {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 2.5rem;
-    background: var(--glass);
-    border: 1px solid var(--glass-border);
-    border-radius: 20px;
-    margin-bottom: 2.5rem;
-    transition: var(--transition);
-}
-
-.contact-email:hover {
-    border-color: var(--primary);
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.contact-email i {
-    width: 50px;
-    height: 50px;
-    color: var(--primary);
-}
-
-.email-link {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--text-main);
-    text-decoration: none;
-    transition: var(--transition);
-    word-break: break-all;
-}
-
-.email-link:hover {
+.academic-number {
+    font-size: 1.2rem;
+    font-weight: 700;
     color: var(--primary-light);
 }
 
-.contact-socials {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+.section-title-text {
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
-.social-link {
+.academic-card {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 32px;
+    padding: 3rem;
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 1rem 1.5rem;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+}
+
+.academic-card::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 2px solid var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.academic-card::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary);
+    box-shadow: 0 0 20px var(--primary);
+}
+
+.academic-info {
+    flex: 1;
+}
+
+.degree-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-light);
+    margin-bottom: 0.5rem;
+}
+
+.degree-subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.college-name {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.university-name {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.cgpa-card {
     background: var(--glass);
-    border: 1px solid var(--glass-border);
-    border-radius: 12px;
-    text-decoration: none;
-    color: var(--text-main);
-    transition: var(--transition);
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    padding: 1.5rem 2.5rem;
+    text-align: center;
+}
+
+.cgpa-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.cgpa-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.year-range {
+    color: var(--text-muted);
     font-weight: 500;
 }
 
-.social-link:hover {
-    border-color: var(--primary);
-    background: rgba(255, 255, 255, 0.05);
-    transform: translateY(-3px);
+/* Contact Section */
+.contact {
+    padding: 100px 0;
+    background: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
 }
 
-.social-link i {
+.contact-header {
+    margin-bottom: 4rem;
+}
+
+.contact-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.contact-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.info-description {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(5px);
+}
+
+.contact-item i {
     width: 24px;
     height: 24px;
     color: var(--primary-light);
+    flex-shrink: 0;
+}
+
+.contact-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.contact-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.contact-value {
+    font-size: 1rem;
+    color: var(--text-main);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-value:hover {
+    color: var(--primary-light);
+}
+
+.contact-form-wrapper {
+    background: var(--bg-card);
+    padding: 0;
+    border-radius: 24px;
 }
 
 .contact-form {
@@ -975,16 +1106,40 @@ h3,
     gap: 1.5rem;
 }
 
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 1rem 1.5rem;
+    padding: 0.9rem 1.25rem;
     background: var(--glass);
     border: 1px solid var(--glass-border);
     border-radius: 12px;
     color: var(--text-main);
     font-family: inherit;
+    font-size: 1rem;
     transition: var(--transition);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
 .form-group input:focus,
@@ -992,6 +1147,30 @@ h3,
     outline: none;
     border-color: var(--primary);
     background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    background: var(--gradient);
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.5);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px -10px rgba(99, 102, 241, 0.7);
+}
+
+.submit-btn:active {
+    transform: translateY(-1px);
 }
 
 /* Footer */
@@ -1047,6 +1226,234 @@ footer {
     .hero-visual {
         display: none;
     }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-title {
+        font-size: 2.5rem;
+    }
+
+    .academic-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-title-text {
+        font-size: 2rem;
+    }
+
+    .degree-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+/* Chatbot Styles */
+.chatbot-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 3000;
+}
+
+.chatbot-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gradient);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 3001;
+}
+
+.chatbot-toggle:hover {
+    transform: scale(1.1);
+}
+
+.chatbot-toggle i {
+    width: 28px;
+    height: 28px;
+    color: white;
+}
+
+.chatbot-window {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 380px;
+    height: 550px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.7);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chatbot-window.active {
+    display: flex;
+    animation: slideUpChat 0.3s ease-out;
+}
+
+@keyframes slideUpChat {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chatbot-header {
+    padding: 1.5rem;
+    background: var(--glass);
+    border-bottom: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chatbot-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatbot-avatar i {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.chatbot-header h3 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.chatbot-header span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: block;
+}
+
+.chatbot-close {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.chatbot-close i {
+    width: 20px;
+    height: 20px;
+}
+
+.chatbot-close:hover {
+    color: var(--text-main);
+}
+
+.chatbot-messages {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.chatbot-message {
+    max-width: 85%;
+    padding: 0.75rem 1rem;
+    border-radius: 16px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.chatbot-message.bot {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    color: var(--text-main);
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+.chatbot-message.user {
+    background: var(--gradient);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.chatbot-input-container {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--glass-border);
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.chatbot-input-container input {
+    flex: 1;
+    padding: 0.85rem 1.25rem;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.chatbot-input-container input:focus {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.chatbot-input-container button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--gradient);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.chatbot-input-container button:hover {
+    transform: scale(1.05);
+}
+
+.chatbot-input-container button i {
+    width: 20px;
+    height: 20px;
+    color: white;
 }
 
 @media (max-width: 480px) {
@@ -1059,6 +1466,25 @@ footer {
     }
 
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chatbot-container {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .chatbot-window {
+        width: calc(100vw - 40px);
+        right: 0;
+        bottom: 70px;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .form-row {
         grid-template-columns: 1fr;
     }
 }
