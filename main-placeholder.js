@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Chatbot with Welcome Message
     function initializeChatbot() {
         isChatbotInitialized = true;
-        addBotMessage("Hi! 👋 I'm Srushti's virtual assistant. Ask me anything about her skills, projects, education, or contact info!");
+        addBotMessage("Hi! 👋 I’m Srushti’s virtual assistant. Ask me anything about her background, skills, projects, education, achievements, leadership, interests, or contact info!");
         // Add quick reply suggestions
         addQuickReplies();
     }
@@ -293,40 +293,61 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 800);
     }
 
-    // Simple rule-based NLP response generator
+    // General rule-based response generator for questions about Srushti
     function getResponse(text) {
-        if (text.includes('project') || text.includes('work') || text.includes('build')) {
-            return `Srushti has worked on several impressive projects:
-            <br>• <strong>🚀 AI Autopilot</strong>: A full-stack AI-powered dashboard featuring ChatGPT responses (Groq/LLaMA), JWT authentication, and command execution.
-            <br>• <strong>🎮 Learn Quest</strong>: An educational gaming platform, a Savishkar Karnataka North Finalist!
-            <br>• <strong>🌱 Plant Disease Detection</strong>: CNN & TensorFlow ML model recommending treatments.
-            <br>• <strong>🛡️ Rakshaka</strong>: An AI-powered autonomous drone safety system with live video streaming and SOS GPS dispatch.
-            <br>• <strong>🐄 Cow Breed Classifier</strong>: Deep Learning CNN model identifying cow breeds.`;
+        const normalizedText = (text || '').toLowerCase().trim().replace(/[^a-z0-9\s]/g, ' ');
+        const hasAny = (keywords) => keywords.some(keyword => normalizedText.includes(keyword));
+        const hasPhrase = (phrases) => phrases.some(phrase => normalizedText.includes(phrase));
+
+        if (!normalizedText) {
+            return "Hello! I can answer questions about Srushti S Patil—her background, skills, projects, education, achievements, leadership, interests, or contact details.";
         }
-        if (text.includes('skill') || text.includes('tech') || text.includes('language') || text.includes('code')) {
-            return `Srushti's technical skills include:
-            <br>• <strong>Frontend:</strong> HTML5, CSS3, JavaScript, Python, Bootstrap
-            <br>• <strong>Backend:</strong> MongoDB, SQLite
-            <br>• <strong>Tools:</strong> Git, GitHub, VS Code, Netlify, Vercel, Render`;
+
+        if (hasAny(['hi', 'hello', 'hey', 'hola', 'namaste', 'thanks', 'thank you', 'good morning', 'good evening'])) {
+            return "Hello! I can answer questions about Srushti S Patil—her background, skills, projects, education, achievements, leadership, interests, or contact details.";
         }
-        if (text.includes('education') || text.includes('college') || text.includes('study') || text.includes('degree') || text.includes('journey')) {
-            return `Srushti is pursuing a <strong>Bachelor of Engineering in Electronics & Communication</strong> at <strong>AGM Rural College of Engineering & Technology, Varur</strong> (expected 2027) with an expected CGPA of <strong>8.5</strong>. She also studies at NxtWave CCBP 4.0 Academy.`;
+
+        if (hasPhrase(['who are you', 'what is your name', 'your name', 'who is srushti', 'tell me about srushti', 'tell me about her', 'introduce yourself', 'about srushti', 'about her', 'overview', 'background'])) {
+            return `Srushti S Patil is an Electronics & Communication Engineering student, a Fullstack Developer, and an ML enthusiast who enjoys building practical solutions that connect software and hardware.`;
         }
-        if (text.includes('contact') || text.includes('email') || text.includes('phone') || text.includes('reach') || text.includes('connect')) {
-            return `You can reach Srushti via:
-            <br>• ✉️ <strong>Email:</strong> <a href="mailto:srushtipatil015@gmail.com">srushtipatil015@gmail.com</a>
-            <br>• 📞 <strong>Phone:</strong> <a href="tel:+916360732272">+91 6360732272</a>
-            <br>• 🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/srushti-patil-ss25205" target="_blank">srushti-patil-ss25205</a>
-            <br>• 💻 <strong>GitHub:</strong> <a href="https://github.com/srushti81" target="_blank">github.com/srushti81</a>`;
+
+        if (hasAny(['project', 'projects', 'work', 'built', 'build', 'portfolio', 'created', 'developed', 'made', 'app'])) {
+            return `Srushti has worked on several impressive projects including <strong>AI Autopilot</strong>, <strong>Learn Quest</strong>, <strong>Plant Disease Detection</strong>, <strong>Cow Breed Classifier</strong>, and <strong>Rakshaka</strong>.`;
         }
-        if (text.includes('lead') || text.includes('oscode') || text.includes('role') || text.includes('appoint')) {
-            return `Srushti was appointed as the <strong>Technical Team Lead for the OSCode AGMR Chapter (2025–2026)</strong>, where she leads technical teams, mentors peers, and organizes open-source events.`;
+
+        if (hasAny(['skill', 'skills', 'tech', 'technology', 'stack', 'language', 'programming', 'coding', 'code'])) {
+            return `Her technical skills include frontend development, backend development, machine learning, Git/GitHub, and tools such as VS Code, Vercel, Render, and Netlify.`;
         }
-        if (text.includes('hi') || text.includes('hello') || text.includes('hey')) {
-            return "Hello there! How can I help you today?";
+
+        if (hasAny(['education', 'college', 'study', 'student', 'degree', 'university', 'nxtwave', 'engineering', 'cgpa', 'course'])) {
+            return `Srushti is pursuing a <strong>Bachelor of Engineering in Electronics & Communication</strong> at <strong>AGM Rural College of Engineering & Technology, Varur</strong>, with expected graduation in 2027. She is also learning through <strong>NxtWave CCBP 4.0 Academy</strong>.`;
         }
-        
-        return "I'm not sure about that. Try asking about her **Projects**, **Skills**, **Education**, or **Contact** details! You can also check her full portfolio on this page.";
+
+        if (hasAny(['contact', 'email', 'phone', 'reach', 'connect', 'linkedin', 'github', 'social'])) {
+            return `You can reach Srushti at <a href="mailto:srushtipatil015@gmail.com">srushtipatil015@gmail.com</a>, via <a href="tel:+916360732272">+91 6360732272</a>, or through her LinkedIn and GitHub profiles linked on this page.`;
+        }
+
+        if (hasAny(['achievement', 'achievements', 'award', 'awards', 'hackathon', 'winner', 'finalist', 'rank', 'top'])) {
+            return `Srushti has earned recognition through hackathon participation, strong academic performance, and leadership in technical events and projects.`;
+        }
+
+        if (hasAny(['lead', 'leadership', 'oscode', 'role', 'team', 'appointed', 'technical team lead'])) {
+            return `She serves as the <strong>Technical Team Lead for the OSCode AGMR Chapter (2025–2026)</strong>, where she helps guide technical projects and mentor peers.`;
+        }
+
+        if (hasAny(['location', 'from', 'city', 'home', 'hubli', 'karnataka'])) {
+            return `Srushti is based in <strong>Hubli, Karnataka</strong>.`;
+        }
+
+        if (hasAny(['interest', 'interests', 'passion', 'goal', 'aspiration', 'future'])) {
+            return `She is passionate about full-stack development, machine learning, AI, and creating solutions that make a real impact.`;
+        }
+
+        if (hasAny(['why', 'what makes', 'strength', 'good at', 'can do', 'best'])) {
+            return `She is known for her curiosity, problem-solving mindset, leadership, and ability to build meaningful projects across web development and AI.`;
+        }
+
+        return `I can help with questions about Srushti’s background, skills, projects, education, achievements, leadership, interests, or contact information. Try asking something like “Tell me about Srushti” or “What projects has she built?”`;
     }
 
     // Input handlers
